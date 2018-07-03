@@ -15,6 +15,10 @@
 
 - shell: |
     export PATH="$HOME/local/go/bin:$HOME/go/bin:$PATH"
+
+    mkdir -p $GOPATH/src/golang.org/x
+    git clone https://go.googlesource.com/net $GOPATH/src/golang.org/x/net
+
     go get github.com/constabulary/gb/...
     cd /home/isucon/isubata/bench
     gb vendor restore
